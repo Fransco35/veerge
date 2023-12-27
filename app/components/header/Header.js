@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./header.module.css";
 // navone
@@ -15,7 +17,32 @@ import { SlCalender } from "react-icons/sl";
 import { IoSettingsOutline } from "react-icons/io5";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 
+import {
+  Button,
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Input,
+  useDisclosure,
+} from "@chakra-ui/react";
+
+import React, { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
 function Header() {
+  const [value, setValue] = useState(new Date());
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
+
+  function onChange(nextValue) {
+    setValue(nextValue);
+  }
   return (
     <header className={styles.header}>
       <div className={styles.navOne}>
@@ -31,7 +58,7 @@ function Header() {
         </div>
         <div className={styles.iconset}>
           <CiSquarePlus size={30} />
-          <MdOutlineDateRange size={30} />
+          <MdOutlineDateRange size={30} onClick={onOpen} ref={btnRef} />
           <IoIosNotificationsOutline size={30} />
         </div>
         <div className={styles.avatar}>
@@ -75,6 +102,29 @@ function Header() {
           </div>
         </div>
       </div>
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Calender</DrawerHeader>
+
+          <DrawerBody>
+            <Calendar onChange={onChange} value={value} />
+          </DrawerBody>
+
+          <DrawerFooter>
+            <Button variant="outline" mr={3} onClick={onClose}>
+              Cancel
+            </Button>
+            <Button colorScheme="blue">Save</Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     </header>
   );
 }
