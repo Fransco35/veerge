@@ -1,0 +1,224 @@
+.salesOverview {
+  grid-column: 2 / 10;
+  grid-row: 3 / 5;
+
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(5, minmax(10px, min-content));
+}
+
+.salesHeading {
+  grid-column: 1 /6;
+  grid-row: 1 / 2;
+}
+
+.salesHeading h1 {
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.salesHeading p {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #606060;
+}
+
+.salesButton {
+  grid-column: 11 / 15;
+  grid-row: 1 / 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  border: 2px solid #cbcbcb;
+  border-radius: 15px;
+  color: #cbcbcb;
+}
+
+.salesDate {
+  grid-column: 11 / 15;
+  grid-row: 2 / 3;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin-top: 35px;
+}
+
+.salesDate p {
+  font-size: 12px;
+}
+
+.salesDate > * {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.salesDate > *:hover {
+  font-weight: bolder;
+  background-color: lightgray;
+}
+
+.salesLine {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+
+  height: 1px;
+  border: 1px solid darkgray;
+  margin: 15px 0;
+}
+
+.salesChartCover {
+  grid-column: 1 / 8;
+  grid-row: 4 / 8;
+
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  background-color: #fff;
+}
+.salesIconLeft {
+  grid-column: 1 /2;
+  grid-row: 3 / 4;
+
+  display: flex;
+  align-items: center;
+}
+
+.salesIconRight {
+  grid-column: 14 /15;
+  grid-row: 3 / 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.salesChart {
+  grid-column: 2 / 14;
+  grid-row: 6 / 7;
+
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.salesChart ul {
+  border-top: 2px solid #e4e4e4;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 100%;
+}
+
+.salesChart li {
+  margin: 0 2px;
+}
+
+.salesBalance {
+  grid-column: 9 / 12;
+  grid-row: 4 / 7;
+
+  color: #000;
+  border-radius: 15px;
+}
+
+.salesBalance h1 {
+  color: #4545fe;
+}
+
+.salesBalanceText {
+  color: #12d8a0;
+}
+
+.salesBalanceText span {
+  color: #000;
+}
+
+.salesDeposit {
+  grid-column: 12 / 15;
+  grid-row: 4 /7;
+
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.salesDeposit h1,
+.salesDepositText {
+  color: #12d8a0;
+}
+
+.salesDepositText span {
+  color: #000;
+}
+
+.sales {
+  margin: 5px;
+  padding: 5px;
+  color: #fff;
+  border: 2px solid #e4e4e4;
+}
+
+.sales h1 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 3;
+}
+
+.salesDepositText,
+.salesBalanceText,
+.salesPurchaseText,
+.salesWithdrawalText {
+  display: flex;
+  align-items: center;
+}
+
+.salesIcon {
+  margin: 0 5px;
+}
+
+.salesPurchase {
+  grid-column: 9 / 12;
+  grid-row: 7 / 8;
+
+  border-radius: 15px;
+}
+
+.salesPurchase h1 {
+  color: #191919;
+}
+
+.salesPurchase h1 span {
+  color: #cbcbcb;
+}
+
+.salesPurchaseText {
+  color: #12d8a0;
+}
+
+.salesPurchaseText span {
+  color: #000;
+}
+
+.salesWithdrawal {
+  grid-column: 12 / 15;
+  grid-row: 7 / 8;
+
+  border-radius: 15px;
+}
+
+.salesWithdrawal h1 {
+  color: #ff6a6a;
+}
+
+.salesWithdrawalText {
+  color: #ff6a6a;
+}
+
+.salesWithdrawalText span {
+  color: #000;
+}

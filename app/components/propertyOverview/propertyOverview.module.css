@@ -1,0 +1,48 @@
+.propertyOverview {
+  grid-column: 10/ 14;
+  grid-row: 3 / 4;
+
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.propertyHeading,
+.propertyCta,
+.propertyMetrics {
+  display: flex;
+  align-items: center;
+}
+
+.propertyHeading h2 {
+  margin: 0 5px;
+}
+
+.propertyCta {
+  display: flex;
+  color: #000;
+  justify-content: flex-end;
+}
+
+.propertyMetrics {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.propertyMetrics > * {
+  padding: 10px;
+  width: 100px;
+  border-radius: 15px;
+}
+
+.propertyDetails {
+  border: 1px solid #e4e4e4;
+}
+
+.propertyDetails h1 {
+  font-weight: 600;
+  font-size: 20px;
+
+  text-align: center;
+}

@@ -1,0 +1,46 @@
+.customersOverview {
+  border-radius: 15px;
+  padding: 15px;
+
+  grid-column: 10/ 14;
+  grid-row: 4 / 5;
+}
+
+.customersHeading,
+.customersCta,
+.customersMetrics {
+  display: flex;
+  align-items: center;
+}
+
+.customersHeading h2 {
+  margin: 0 5px;
+}
+
+.customersCta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.customersMetrics {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.customersMetrics > * {
+  padding: 5px;
+  width: 85px;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+.customersDetails {
+  border: 1px solid #e4e4e4;
+}
+.customersDetails h1 {
+  font-weight: 600;
+  font-size: 20px;
+
+  text-align: center;
+}

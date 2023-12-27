@@ -1,0 +1,39 @@
+.topSelling {
+  grid-column: 11 / 14;
+  grid-row: 5 / 6;
+
+  padding: 10px;
+}
+
+.topSellingHeader h2 {
+  font-weight: 600;
+  color: #12d8a0;
+}
+
+.topSellingBody {
+  display: flex;
+}
+
+.topSellingImgCover {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+}
+
+.topSellingText {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topSellingText h1 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.topSellingText p {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  margin-top: 15px;
+}
